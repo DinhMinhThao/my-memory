@@ -91,11 +91,37 @@ const choseFolde = () => {
 };
 
 const showCrushEl = document.querySelector(".showCrush");
+const showCrushEl1 = document.querySelector('.showCrush1');
+const showCrushEl2 = document.querySelector('.showCrush2')
+const showCrushEl3 = document.querySelector('.showCrush3')
+
 
 const handlShowCrush = () => {
   showCrushEl.classList.toggle("d-none");
 };
+const handlShowCrush1 = () => {
+  showCrushEl1.classList.toggle("d-none");
+};
+const handlShowCrush2 = () => {
+  showCrushEl2.classList.toggle("d-none");
+};
+const handlShowCrush3 = () => {
+  showCrushEl3.classList.toggle("d-none");
+};
+
+
+
 
 const handlBack = () => {
   showCrushEl.classList.toggle("d-none");
+};
+
+const handlBack1 = () => {
+  showCrushEl1.classList.toggle("d-none");
+};
+const handlBack2 = () => {
+  showCrushEl2.classList.toggle("d-none");
+};
+const handlBack3 = () => {
+  showCrushEl3.classList.toggle("d-none");
 };
