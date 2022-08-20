@@ -20,13 +20,51 @@
       </div>
 
       <div class="logo row a-center">
-        <img class="logo-img" src="./img/DotsNine.svg" alt="" />
-        <div class="text-head">Drive Of Me</div>
+        <img
+          onclick="handlShowUse()"
+          class="logo-img"
+          src="./img/DotsNine.svg"
+          alt=""
+        />
+        <a class="text-head" href="index.html">Drive Of Me</a>
+        <div class="memory p-absolute d-none">
+          <div class="btn-dotnine row a-center j-between">
+            <button onclick="handlHideUse()" class="but-img-nine">
+              <img class="logo-img-1" src="./img/DotsNine.svg" alt="" />
+            </button>
+            <button onclick="handlHideUse()" class="but-x">
+              <img src="./img/X.svg" alt="" />
+            </button>
+          </div>
+          <div class="infor-use-data">
+            <p class="infor-use-text">
+              Bạn đã sử dụng <strong>3 Gb</strong> trên tổng số
+              <strong>5 Gb</strong> miễn phí
+            </p>
+          </div>
+          <div class="memory-item">
+            <p>Nhận 100 Gb lưu trữ cho các tệp và ảnh của bạn</p>
+            <a href="/#">Tìm hiểu thêm về các gói lưu lượng</a>
+          </div>
+          <div class="but-money">
+            <p>Mua dung dung lượng lưu trữ</p>
+          </div>
+        </div>
       </div>
 
       <div class="icon-action row a-center">
         <img class="icon-img" src="./img/Sun.svg" alt="" />
         <img class="icon-img icon-user" src="./img/UserCircle.svg" alt="" />
+        <button class="icone-search p-relative">
+          <img src="./img/MagnifyingGlass.svg" alt="" class="searh-icon" />
+
+          <div class="input-smaill p-absolute row a-center">
+            <input type="text" placeholder="Tìm kiếm mọi thứ" />
+          </div>
+          <button class="btn-small-action p-absolute d-flex j-center a-center">
+            <img src="./img/ArrowRight.svg" alt="" />
+          </button>
+        </button>
         <button class="user-name">
           <div class="user-name-items p-relative">
             <p class="user-name-text">MT</p>
@@ -35,9 +73,7 @@
                 <p class="out row j-end">Đăng xuất</p>
                 <div class="row a-center">
                   <div class="col-4">
-                    <p class="user-icon-text">
-                      MT
-                    </p>
+                    <p class="user-icon-text">MT</p>
                   </div>
                   <div class="text-uses col-8">
                     <p class="user-head">Minh Thao</p>
@@ -48,9 +84,37 @@
               </div>
             </div>
           </div>
-
         </button>
-        <img class="icon-img-1" src="./img/List.svg" alt="" />
+        <button class="infor-user-down">
+          <div class="list-infor">
+            <img class="icon-img-1" src="./img/List.svg" alt="" />
+            <div class="list-infor-items"></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="fake-folder d-none p-absolute d-flex a-center j-center">
+        <div class="folder-fake-items p-relative">
+          <p class="fake-head">Tệp của tôi</p>
+          <div onclick="choseFolde()" class="folder-fake-item row">
+            <img class="icon-fake" src="./img/Vector.svg" alt="" />
+            <p class="text-fake">Document 1</p>
+          </div>
+          <div onclick="choseFolde()" class="folder-fake-item row">
+            <img class="icon-fake" src="./img/Vector.svg" alt="" />
+            <p class="text-fake">Document 2</p>
+          </div>
+          <div onclick="choseFolde()" class="folder-fake-item row">
+            <img class="icon-fake" src="./img/Vector.svg" alt="" />
+            <p class="text-fake">Document 3</p>
+          </div>
+          <div class="folder-fake-item-1 row j-end">
+            <button class="but-fake-ss">Di chuyển vào đây</button>
+            <button onclick="handlHideCopy()" class="but-fake-cs">
+              Hủy bỏ
+            </button>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -128,7 +192,7 @@
             <span class="text-tree-head">Read only</span>
           </div>
           <div class="tree-items">
-            <div class="row a-center hover-1">
+            <div onclick="hanldTree()" class="row a-center hover-1">
               <div class="tree-item row a-center">
                 <div class="tree-icons row a-center">
                   <div class="tree-icon tree-icon-right">
@@ -144,12 +208,12 @@
                 <h6 class="text-head-icon">Document</h6>
               </div>
             </div>
-            <div class="tree-items-childen">
+            <div class="tree-items-childen tree-items-childen-one d-none">
               <div class="tree-items">
-                <div class="row a-center hover-1">
+                <div onclick="hanldTree1()" class="row a-center hover-1">
                   <div class="tree-item row a-center">
                     <div class="tree-icons row a-center">
-                      <div class="tree-icon tree-icon-right">
+                      <div class="tree-icon tree-icon-right-1">
                         <img src="./img/CaretRight.svg" alt="arow right" />
                       </div>
                       <div class="tree-icon tree-icon-down">
@@ -164,10 +228,10 @@
                 </div>
               </div>
               <div class="tree-items">
-                <div class="row a-center hover-1">
+                <div onclick="hanldTree2()" class="row a-center hover-1">
                   <div class="tree-item row a-center">
                     <div class="tree-icons row a-center">
-                      <div class="tree-icon tree-icon-right">
+                      <div class="tree-icon tree-icon-right-2">
                         <img src="./img/CaretRight.svg" alt="arow right" />
                       </div>
                       <div class="tree-icon tree-icon-down">
@@ -181,12 +245,12 @@
                   </div>
                 </div>
               </div>
-              <div class="tree-items-childen-2">
+              <div class="tree-items-childen-2 tree-items-childen-one2 d-none">
                 <div class="tree-items">
-                  <div class="row a-center hover-1">
+                  <div onclick="hanldTree3()" class="row a-center hover-1">
                     <div class="tree-item row a-center">
                       <div class="tree-icons row a-center">
-                        <div class="tree-icon tree-icon-right">
+                        <div class="tree-icon tree-icon-right-3">
                           <img src="./img/CaretRight.svg" alt="arow right" />
                         </div>
                         <div class="tree-icon tree-icon-down">
@@ -200,7 +264,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="tree-items-childen-3">
+                <div
+                  class="tree-items-childen-3 d-none tree-items-childen-one1"
+                >
                   <div class="tree-items">
                     <div class="row a-center hover-1">
                       <div class="tree-item row a-center">
@@ -255,10 +321,10 @@
               </div>
 
               <div class="tree-items">
-                <div class="row a-center hover-1">
+                <div onclick="hanldTree4()" class="row a-center hover-1">
                   <div class="tree-item row a-center">
                     <div class="tree-icons row a-center">
-                      <div class="tree-icon tree-icon-right">
+                      <div class="tree-icon tree-icon-right-4">
                         <img src="./img/CaretRight.svg" alt="arow right" />
                       </div>
                       <div class="tree-icon tree-icon-down">
@@ -271,6 +337,106 @@
                     <h6 class="text-head-icon">Ảnh của tôi</h6>
                   </div>
                 </div>
+                <div
+                  class="tree-items-childen-2 tree-items-childen-one10 d-none"
+                >
+                  <div class="tree-items">
+                    <div class="row a-center hover-1">
+                      <div class="tree-item row a-center">
+                        <div class="tree-icons row a-center">
+                          <div class="icon-tree-doc">
+                            <img class="icon-doc" src="./img/JPG.svg" alt="" />
+                          </div>
+                        </div>
+                        <h6 class="text-head-icon">Ảnh crush mặc đẹp.jpg</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tree-items">
+                    <div class="row a-center hover-1">
+                      <div class="tree-item row a-center">
+                        <div class="tree-icons row a-center">
+                          <div class="icon-tree-doc">
+                            <img class="icon-doc" src="./img/JPG.svg" alt="" />
+                          </div>
+                        </div>
+                        <h6 class="text-head-icon">Ảnh crush.jpg</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tree-items">
+                    <div class="row a-center hover-1">
+                      <div class="tree-item row a-center">
+                        <div class="tree-icons row a-center">
+                          <div class="icon-tree-doc">
+                            <img class="icon-doc" src="./img/JPG.svg" alt="" />
+                          </div>
+                        </div>
+                        <h6 class="text-head-icon">Được nắm tay crush.jpg</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tree-items">
+                    <div class="row a-center hover-1">
+                      <div class="tree-item row a-center">
+                        <div class="tree-icons row a-center">
+                          <div class="icon-tree-doc">
+                            <img class="icon-doc" src="./img/JPG.svg" alt="" />
+                          </div>
+                        </div>
+                        <h6 class="text-head-icon">Ảnh crush cười.jpg</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div onclick="hanldTree5()" class="row a-center hover-1">
+              <div class="tree-item row a-center">
+                <div class="tree-icons row a-center">
+                  <div class="tree-icon tree-icon-right-5">
+                    <img src="./img/CaretRight.svg" alt="arow right" />
+                  </div>
+                  <div class="tree-icon tree-icon-down">
+                    <img src="./img/CaretDown.svg" alt="arow down" />
+                  </div>
+                  <div class="tree-icon-folder">
+                    <img src="./img/Vector.svg" alt="foder" />
+                  </div>
+                </div>
+                <h6 class="text-head-icon">Document 1</h6>
+              </div>
+            </div>
+            <div onclick="hanldTree6()" class="row a-center hover-1">
+              <div class="tree-item row a-center">
+                <div class="tree-icons row a-center">
+                  <div class="tree-icon tree-icon-right-6">
+                    <img src="./img/CaretRight.svg" alt="arow right" />
+                  </div>
+                  <div class="tree-icon tree-icon-down">
+                    <img src="./img/CaretDown.svg" alt="arow down" />
+                  </div>
+                  <div class="tree-icon-folder">
+                    <img src="./img/Vector.svg" alt="foder" />
+                  </div>
+                </div>
+                <h6 class="text-head-icon">Document 2</h6>
+              </div>
+            </div>
+            <div onclick="hanldTree7()" class="row a-center hover-1">
+              <div class="tree-item row a-center">
+                <div class="tree-icons row a-center">
+                  <div class="tree-icon tree-icon-right-7">
+                    <img src="./img/CaretRight.svg" alt="arow right" />
+                  </div>
+                  <div class="tree-icon tree-icon-down">
+                    <img src="./img/CaretDown.svg" alt="arow down" />
+                  </div>
+                  <div class="tree-icon-folder">
+                    <img src="./img/Vector.svg" alt="foder" />
+                  </div>
+                </div>
+                <h6 class="text-head-icon">Document 3</h6>
               </div>
             </div>
           </div>
@@ -452,30 +618,52 @@
                       </div>
                     </div>
                   </th>
-                  <th class="list-item col-5">
+                  <th class="list-item col-5 p-relative">
                     <div class="row a-center">
-                      <p class="table-head-text">Tên</p>
-                      <img class="icon-thead" src="./img/ArrowUp.svg" alt="" />
+                      <button class="btn-name-table row a-center">
+                        <p class="table-head-text">Tên</p>
+                        <img
+                          class="icon-thead"
+                          src="./img/ArrowUp.svg"
+                          alt=""
+                        />
+                        <div class="drop-name-table p-absolute">
+                          <p>A - Z</p>
+                          <p>Z - A</p>
+                        </div>
+                      </button>
                     </div>
                   </th>
-                  <th class="list-item col-2">
-                    <div class="row j-between a-center">
-                      <p class="table-head-text">Đã sửa đổi</p>
-                      <img
-                        class="icon-thead"
-                        src="./img/CaretDown.svg"
-                        alt=""
-                      />
+                  <th class="list-item col-2 p-relative">
+                    <div class="row a-center">
+                      <button class="btn-name-table row a-center j-between">
+                        <p class="table-head-text">Đã sửa đổi</p>
+                        <img
+                          class="icon-thead"
+                          src="./img/CaretDown.svg"
+                          alt=""
+                        />
+                        <div class="drop-name-table p-absolute">
+                          <p>Cũ đến mới hơn</p>
+                          <p>Mới hơn đến cũ hơn</p>
+                        </div>
+                      </button>
                     </div>
                   </th>
-                  <th class="list-item col-2">
+                  <th class="list-item col-2 p-relative">
                     <div class="row j-between a-center">
-                      <p class="table-head-text">Dung lượng</p>
-                      <img
-                        class="icon-thead"
-                        src="./img/CaretDown.svg"
-                        alt=""
-                      />
+                      <button class="btn-name-table row a-center j-between">
+                        <p class="table-head-text">Dung lượng</p>
+                        <img
+                          class="icon-thead"
+                          src="./img/CaretDown.svg"
+                          alt=""
+                        />
+                        <div class="drop-name-table p-absolute">
+                          <p>Nhỏ đến lớn</p>
+                          <p>Lớn đến nhỏ</p>
+                        </div>
+                      </button>
                     </div>
                   </th>
                   <th class="list-item col-2">
@@ -494,28 +682,31 @@
                         <img src="./img/Vector.svg" alt="foder" />
                       </div>
                       <div class="nav-action p-absolute">
-                        <div class="nav-action-items row j-between a-center ">
+                        <div class="nav-action-items row j-between a-center">
                           <div class="nav-action-item row a-center">
                             <button class="row btn-action a-center">
-                              <img src="./img/ArrowLineDown.svg" alt="">
+                              <img src="./img/ArrowLineDown.svg" alt="" />
                               <p class="nav-action-text">Tải xuống</p>
                             </button>
-                            <button class="row btn-action a-center">
-                              <img src="./img/Cards.svg" alt="">
+                            <button
+                              onclick="handlShowCopy()"
+                              class="row btn-action a-center"
+                            >
+                              <img src="./img/Cards.svg" alt="" />
                               <p class="nav-action-text">Sao chép đến</p>
                             </button>
                             <button class="row btn-action a-center">
-                              <img src="./img/Scan.svg" alt="">
+                              <img src="./img/Scan.svg" alt="" />
                               <p class="nav-action-text">Đổi tên</p>
                             </button>
                           </div>
                           <div class="nav-action-item row a-center">
                             <button class="row btn-action a-center">
-                              <img src="./img/Users.svg" alt="">
+                              <img src="./img/Users.svg" alt="" />
                               <p class="nav-action-text">Chia sẻ</p>
                             </button>
                             <button class="row btn-action a-center">
-                              <img src="./img/Trash.svg" alt="">
+                              <img src="./img/Trash.svg" alt="" />
                               <p class="nav-action-text">Xóa</p>
                             </button>
                           </div>
@@ -525,7 +716,9 @@
                   </td>
                   <td class="list-item col-5">
                     <div class="row j-between a-center">
-                      <p class="table-body-text table-body-text-1">Doccument</p>
+                      <p class="table-body-text table-body-text-1">
+                        <a href="./PageHTML/Detail/Detail.html">Doccument</a>
+                      </p>
                       <button class="dot-three">
                         <div class="dot-three-items p-relative">
                           <img
@@ -535,13 +728,18 @@
                           />
                           <div class="dot-three-item p-absolute">
                             <p class="dot-three-item-text">Tải xuống</p>
-                            <p class="dot-three-item-text">Sao chép</p>
+                            <p
+                              onclick="handlShowCopy()"
+                              class="dot-three-item-text"
+                            >
+                              Sao chép
+                            </p>
                             <p class="dot-three-item-text">Đổi tên</p>
                             <p class="dot-three-item-text">Chia sẻ</p>
                             <p class="dot-three-item-text">Xóa</p>
                           </div>
                         </div>
-                    </button>
+                      </button>
                     </div>
                   </td>
                   <td class="list-item">
@@ -562,28 +760,31 @@
                         <img src="./img/Vector.svg" alt="foder" />
                       </div>
                       <div class="nav-action p-absolute">
-                        <div class="nav-action-items row j-between a-center ">
+                        <div class="nav-action-items row j-between a-center">
                           <div class="nav-action-item row a-center">
                             <button class="row btn-action a-center">
-                              <img src="./img/ArrowLineDown.svg" alt="">
+                              <img src="./img/ArrowLineDown.svg" alt="" />
                               <p class="nav-action-text">Tải xuống</p>
                             </button>
-                            <button class="row btn-action a-center">
-                              <img src="./img/Cards.svg" alt="">
+                            <button
+                              onclick="handlShowCopy()"
+                              class="row btn-action a-center"
+                            >
+                              <img src="./img/Cards.svg" alt="" />
                               <p class="nav-action-text">Sao chép đến</p>
                             </button>
                             <button class="row btn-action a-center">
-                              <img src="./img/Scan.svg" alt="">
+                              <img src="./img/Scan.svg" alt="" />
                               <p class="nav-action-text">Đổi tên</p>
                             </button>
                           </div>
                           <div class="nav-action-item row a-center">
                             <button class="row btn-action a-center">
-                              <img src="./img/Users.svg" alt="">
+                              <img src="./img/Users.svg" alt="" />
                               <p class="nav-action-text">Chia sẻ</p>
                             </button>
                             <button class="row btn-action a-center">
-                              <img src="./img/Trash.svg" alt="">
+                              <img src="./img/Trash.svg" alt="" />
                               <p class="nav-action-text">Xóa</p>
                             </button>
                           </div>
@@ -593,7 +794,9 @@
                   </td>
                   <td class="list-item col-5">
                     <div class="row j-between a-center">
-                      <p class="table-body-text table-body-text-1">Doccument 1</p>
+                      <p class="table-body-text table-body-text-1">
+                        Doccument 1
+                      </p>
                       <button class="dot-three">
                         <div class="dot-three-items p-relative">
                           <img
@@ -603,20 +806,106 @@
                           />
                           <div class="dot-three-item p-absolute">
                             <p class="dot-three-item-text">Tải xuống</p>
-                            <p class="dot-three-item-text">Sao chép</p>
+                            <p
+                              onclick="handlShowCopy()"
+                              class="dot-three-item-text"
+                            >
+                              Sao chép
+                            </p>
                             <p class="dot-three-item-text">Đổi tên</p>
                             <p class="dot-three-item-text">Chia sẻ</p>
                             <p class="dot-three-item-text">Xóa</p>
                           </div>
                         </div>
-                    </button>
+                      </button>
                     </div>
                   </td>
                   <td class="list-item">
                     <p class="table-body-text">12/12/2012</p>
                   </td>
                   <td class="list-item">
-                    <p class="table-body-text">3 Gb</p>
+                    <p class="table-body-text">0 Gb</p>
+                  </td>
+                  <td class="list-item">
+                    <p class="table-body-text">Riêng tư</p>
+                  </td>
+                </tr>
+                <tr class="text-lists">
+                  <td class="list-item col-1">
+                    <div class="input-icon row a-center">
+                      <input class="input-test" type="radio" name="checked" />
+                      <div class="file-icon-table">
+                        <img src="./img/Vector.svg" alt="foder" />
+                      </div>
+                      <div class="nav-action p-absolute">
+                        <div class="nav-action-items row j-between a-center">
+                          <div class="nav-action-item row a-center">
+                            <button class="row btn-action a-center">
+                              <img src="./img/ArrowLineDown.svg" alt="" />
+                              <p class="nav-action-text">Tải xuống</p>
+                            </button>
+                            <button
+                              onclick="handlShowCopy()"
+                              class="row btn-action a-center"
+                            >
+                              <img src="./img/Cards.svg" alt="" />
+                              <p class="nav-action-text">Sao chép đến</p>
+                            </button>
+                            <button class="row btn-action a-center">
+                              <img src="./img/Scan.svg" alt="" />
+                              <p class="nav-action-text">Đổi tên</p>
+                            </button>
+                          </div>
+                          <div class="nav-action-item row a-center">
+                            <button class="row btn-action a-center">
+                              <img src="./img/Users.svg" alt="" />
+                              <p class="nav-action-text">Chia sẻ</p>
+                            </button>
+                            <button class="row btn-action a-center">
+                              <img src="./img/Trash.svg" alt="" />
+                              <p class="nav-action-text">Xóa</p>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="list-item col-5">
+                    <div class="row j-between a-center">
+                      <p
+                        onclick="handlClick()"
+                        class="table-body-text table-body-text-1"
+                      >
+                        Doccument 2
+                      </p>
+                      <button class="dot-three">
+                        <div class="dot-three-items p-relative">
+                          <img
+                            class="icon-thead"
+                            src="./img/DotsThreeVertical.svg"
+                            alt=""
+                          />
+                          <div class="dot-three-item p-absolute">
+                            <p class="dot-three-item-text">Tải xuống</p>
+                            <p
+                              onclick="handlShowCopy()"
+                              class="dot-three-item-text"
+                            >
+                              Sao chép
+                            </p>
+                            <p class="dot-three-item-text">Đổi tên</p>
+                            <p class="dot-three-item-text">Chia sẻ</p>
+                            <p class="dot-three-item-text">Xóa</p>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="list-item">
+                    <p class="table-body-text">12/12/2012</p>
+                  </td>
+                  <td class="list-item">
+                    <p class="table-body-text">0 Gb</p>
                   </td>
                   <td class="list-item">
                     <p class="table-body-text">Riêng tư</p>
@@ -630,28 +919,31 @@
                         <img src="./img/Vector.svg" alt="foder" />
                       </div>
                       <div class="nav-action p-absolute">
-                        <div class="nav-action-items row j-between a-center ">
+                        <div class="nav-action-items row j-between a-center">
                           <div class="nav-action-item row a-center">
                             <button class="row btn-action a-center">
-                              <img src="./img/ArrowLineDown.svg" alt="">
+                              <img src="./img/ArrowLineDown.svg" alt="" />
                               <p class="nav-action-text">Tải xuống</p>
                             </button>
-                            <button class="row btn-action a-center">
-                              <img src="./img/Cards.svg" alt="">
+                            <button
+                              onclick="handlShowCopy()"
+                              class="row btn-action a-center"
+                            >
+                              <img src="./img/Cards.svg" alt="" />
                               <p class="nav-action-text">Sao chép đến</p>
                             </button>
                             <button class="row btn-action a-center">
-                              <img src="./img/Scan.svg" alt="">
+                              <img src="./img/Scan.svg" alt="" />
                               <p class="nav-action-text">Đổi tên</p>
                             </button>
                           </div>
                           <div class="nav-action-item row a-center">
                             <button class="row btn-action a-center">
-                              <img src="./img/Users.svg" alt="">
+                              <img src="./img/Users.svg" alt="" />
                               <p class="nav-action-text">Chia sẻ</p>
                             </button>
                             <button class="row btn-action a-center">
-                              <img src="./img/Trash.svg" alt="">
+                              <img src="./img/Trash.svg" alt="" />
                               <p class="nav-action-text">Xóa</p>
                             </button>
                           </div>
@@ -661,7 +953,9 @@
                   </td>
                   <td class="list-item col-5">
                     <div class="row j-between a-center">
-                      <p class="table-body-text table-body-text-1">Doccument 2</p>
+                      <p class="table-body-text table-body-text-1">
+                        Doccument 3
+                      </p>
                       <button class="dot-three">
                         <div class="dot-three-items p-relative">
                           <img
@@ -671,88 +965,25 @@
                           />
                           <div class="dot-three-item p-absolute">
                             <p class="dot-three-item-text">Tải xuống</p>
-                            <p class="dot-three-item-text">Sao chép</p>
+                            <p
+                              onclick="handlShowCopy()"
+                              class="dot-three-item-text"
+                            >
+                              Sao chép
+                            </p>
                             <p class="dot-three-item-text">Đổi tên</p>
                             <p class="dot-three-item-text">Chia sẻ</p>
                             <p class="dot-three-item-text">Xóa</p>
                           </div>
                         </div>
-                    </button>
+                      </button>
                     </div>
                   </td>
                   <td class="list-item">
                     <p class="table-body-text">12/12/2012</p>
                   </td>
                   <td class="list-item">
-                    <p class="table-body-text">3 Gb</p>
-                  </td>
-                  <td class="list-item">
-                    <p class="table-body-text">Riêng tư</p>
-                  </td>
-                </tr>
-                <tr class="text-lists">
-                  <td class="list-item col-1">
-                    <div class="input-icon row a-center">
-                      <input type="radio" name="checked" />
-                      <div class="file-icon-table">
-                        <img src="./img/Vector.svg" alt="foder" />
-                      </div>
-                      <div class="nav-action p-absolute">
-                        <div class="nav-action-items row j-between a-center ">
-                          <div class="nav-action-item row a-center">
-                            <button class="row btn-action a-center">
-                              <img src="./img/ArrowLineDown.svg" alt="">
-                              <p class="nav-action-text">Tải xuống</p>
-                            </button>
-                            <button class="row btn-action a-center">
-                              <img src="./img/Cards.svg" alt="">
-                              <p class="nav-action-text">Sao chép đến</p>
-                            </button>
-                            <button class="row btn-action a-center">
-                              <img src="./img/Scan.svg" alt="">
-                              <p class="nav-action-text">Đổi tên</p>
-                            </button>
-                          </div>
-                          <div class="nav-action-item row a-center">
-                            <button class="row btn-action a-center">
-                              <img src="./img/Users.svg" alt="">
-                              <p class="nav-action-text">Chia sẻ</p>
-                            </button>
-                            <button class="row btn-action a-center">
-                              <img src="./img/Trash.svg" alt="">
-                              <p class="nav-action-text">Xóa</p>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="list-item col-5">
-                    <div class="row j-between a-center">
-                      <p class="table-body-text table-body-text-1">Doccument 3</p>
-                      <button class="dot-three">
-                        <div class="dot-three-items p-relative">
-                          <img
-                            class="icon-thead"
-                            src="./img/DotsThreeVertical.svg"
-                            alt=""
-                          />
-                          <div class="dot-three-item p-absolute">
-                            <p class="dot-three-item-text">Tải xuống</p>
-                            <p class="dot-three-item-text">Sao chép</p>
-                            <p class="dot-three-item-text">Đổi tên</p>
-                            <p class="dot-three-item-text">Chia sẻ</p>
-                            <p class="dot-three-item-text">Xóa</p>
-                          </div>
-                        </div>
-                    </button>
-                    </div>
-                  </td>
-                  <td class="list-item">
-                    <p class="table-body-text">12/12/2012</p>
-                  </td>
-                  <td class="list-item">
-                    <p class="table-body-text">3 Gb</p>
+                    <p class="table-body-text">0 Gb</p>
                   </td>
                   <td class="list-item">
                     <p class="table-body-text">Riêng tư</p>
@@ -760,10 +991,11 @@
                 </tr>
               </tbody>
             </table>
-
           </div>
         </div>
       </div>
     </div>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

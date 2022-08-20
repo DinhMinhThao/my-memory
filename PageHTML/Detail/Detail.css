@@ -1,0 +1,16 @@
+@import url(../../base.css);
+@import url(../../index.css);
+
+.icon-detal{
+    width: 25px;
+    margin: 0 10px;
+    margin-bottom: -10px;
+}
+
+.text-head-table-1 {
+    font-weight: 600;
+    margin-left: 0;
+}
+.text-head-table a {
+    color: #000000;
+}
