@@ -796,7 +796,7 @@ tr[class="text-lists"]:focus-within .nav-action {
 
   .nav {
     position: fixed;
-    bottom: 0;
+    top: calc(100vh - 44px);
     height: auto;
     width: 100%;
     padding-top: 0;
