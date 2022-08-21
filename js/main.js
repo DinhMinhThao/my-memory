@@ -8,7 +8,7 @@ const simpleStatuts = (initial) => {
   ];
 };
 
-const [star, starSet] = simpleStatuts(0);
+//Tree view
 
 const icondeg = document.querySelector(".tree-icon-right");
 const icondeg1 = document.querySelector(".tree-icon-right-1");
@@ -73,6 +73,8 @@ const handlHideUse = () => {
   showUse.classList.toggle("d-none");
 };
 
+// Move Coppy
+
 const showCoppy = document.querySelector(".fake-folder");
 const trainBtn = document.querySelector(".but-fake-ss");
 
@@ -90,11 +92,34 @@ const choseFolde = () => {
   trainBtn.style.backgroundColor = "#1c7d4e";
 };
 
-const showCrushEl = document.querySelector(".showCrush");
-const showCrushEl1 = document.querySelector('.showCrush1');
-const showCrushEl2 = document.querySelector('.showCrush2')
-const showCrushEl3 = document.querySelector('.showCrush3')
+// Detelete Index
 
+const allElD3 = document.querySelectorAll('.action-del-3')
+const allElD2 = document.querySelectorAll('.action-del-2')
+const allElD1 = document.querySelectorAll('.action-del-1')
+const allElD = document.querySelectorAll('.action-del')
+
+const handlClickDel0 = () =>{
+  allElD.forEach(a=>a.classList.toggle('d-none'))
+}
+const handlClickDel1 = () =>{
+  allElD1.forEach(a=>a.classList.toggle('d-none'))
+}
+const handlClickDel2 = () => {
+  allElD2.forEach(a=>a.classList.toggle('d-none'))
+}
+const handlClickDel = () => {
+  allElD3.forEach(a=>a.classList.toggle('d-none'))
+}
+
+
+
+// Detail Img
+
+const showCrushEl = document.querySelector(".showCrush");
+const showCrushEl1 = document.querySelector(".showCrush1");
+const showCrushEl2 = document.querySelector(".showCrush2");
+const showCrushEl3 = document.querySelector(".showCrush3");
 
 const handlShowCrush = () => {
   showCrushEl.classList.toggle("d-none");
@@ -108,9 +133,6 @@ const handlShowCrush2 = () => {
 const handlShowCrush3 = () => {
   showCrushEl3.classList.toggle("d-none");
 };
-
-
-
 
 const handlBack = () => {
   showCrushEl.classList.toggle("d-none");

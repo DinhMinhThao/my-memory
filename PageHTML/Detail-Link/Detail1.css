@@ -28,7 +28,7 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 .crush-img img {
-  width: 30%;
+  width: 40%;
   height: calc(100vh - 54px);
   object-fit: cover;
 }
@@ -69,4 +69,15 @@
 }
 .icon-img-crush img {
   margin-right: 8px;
+}
+
+@media (max-width: 1024px) and (min-width: 610px) {
+    .crush-img img {
+        width: 50%;
+      }
+}
+@media (max-width: 609px) {
+    .crush-img img {
+        width: 60%;
+      }
 }
